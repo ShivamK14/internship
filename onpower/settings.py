@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import django_heroku
 
 
 
@@ -142,5 +143,5 @@ JWT_SECRET_KEY = 'JWT_SECRET_KEY'
 
 STATIC_URL = '/static/'
 
-
+django_heroku.settings(locals())
 
