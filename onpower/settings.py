@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'authentication',
     'contacts',
-    'corsheaders'
+    'corsheaders',
+    'devices',
 ]
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
@@ -140,12 +141,21 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
  ]
 #jWT
-JWT_SECRET_KEY = 'JWT_SECRET_KEY'
+JWT_SECRET_KEY ='JWT_SECRET_KEY'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 django_heroku.settings(locals())
+CORS_ORIGIN_ALLOW_ALL = True
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'shivamkarlegames@gmail.com'
+EMAIL_HOST_PASSWORD = 'ShivamKG@0214'
+MEDIA_URL
