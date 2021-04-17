@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'authentication',
     'contacts',
-    'corsheaders'
+    'corsheaders',
+    'webhooks'
 ]
 SWAGGER_SETTINGS = {
     'SECURITY_DEFINITIONS': {
@@ -94,6 +95,7 @@ WSGI_APPLICATION = 'onpower.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
